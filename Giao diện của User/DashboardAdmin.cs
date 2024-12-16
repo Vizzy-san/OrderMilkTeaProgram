@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OrderMillTeaProgram
+namespace OrderMillTeaProgram.Giao_diện_của_User
 {
-    public partial class ForgotPassword : Form
+    public partial class DashboardAdmin : Form
     {
-        public ForgotPassword()
+        public DashboardAdmin()
         {
             InitializeComponent();
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
     }
 }

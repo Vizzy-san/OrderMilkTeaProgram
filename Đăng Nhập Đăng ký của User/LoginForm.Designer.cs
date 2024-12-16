@@ -118,7 +118,7 @@
             this.lblDangKy.TabIndex = 8;
             this.lblDangKy.TabStop = true;
             this.lblDangKy.Text = "Đăng ký ngay";
-            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
             // 
             // guna2HtmlLabel1
             // 
@@ -160,6 +160,7 @@
             this.btnDangNhap.Size = new System.Drawing.Size(430, 45);
             this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // txtMatKhau
             // 
@@ -172,6 +173,7 @@
             this.txtMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtMatKhau.ForeColor = System.Drawing.Color.Black;
             this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhau.Location = new System.Drawing.Point(205, 349);
             this.txtMatKhau.Name = "txtMatKhau";
@@ -192,6 +194,7 @@
             this.txtDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDangNhap.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtDangNhap.ForeColor = System.Drawing.Color.Black;
             this.txtDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDangNhap.Location = new System.Drawing.Point(205, 258);
             this.txtDangNhap.Name = "txtDangNhap";
@@ -200,6 +203,7 @@
             this.txtDangNhap.SelectedText = "";
             this.txtDangNhap.Size = new System.Drawing.Size(430, 39);
             this.txtDangNhap.TabIndex = 4;
+            this.txtDangNhap.TextChanged += new System.EventHandler(this.txtDangNhap_TextChanged);
             // 
             // lblMk
             // 

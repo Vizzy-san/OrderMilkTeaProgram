@@ -39,7 +39,7 @@
             this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.txtCheckPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMaGioiThieu = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.frmSignForm.Controls.Add(this.btnDangKy);
             this.frmSignForm.Controls.Add(this.txtCheckPass);
             this.frmSignForm.Controls.Add(this.txtMatKhau);
-            this.frmSignForm.Controls.Add(this.guna2TextBox2);
+            this.frmSignForm.Controls.Add(this.txtMaGioiThieu);
             this.frmSignForm.Controls.Add(this.txtEmail);
             this.frmSignForm.Controls.Add(this.txtDangNhap);
             this.frmSignForm.Controls.Add(this.label1);
@@ -192,6 +192,7 @@
             this.btnDangKy.Size = new System.Drawing.Size(430, 45);
             this.btnDangKy.TabIndex = 5;
             this.btnDangKy.Text = "Tiếp tục ";
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // txtCheckPass
             // 
@@ -204,6 +205,7 @@
             this.txtCheckPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCheckPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCheckPass.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtCheckPass.ForeColor = System.Drawing.Color.Black;
             this.txtCheckPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCheckPass.Location = new System.Drawing.Point(205, 463);
             this.txtCheckPass.Name = "txtCheckPass";
@@ -224,6 +226,7 @@
             this.txtMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtMatKhau.ForeColor = System.Drawing.Color.Black;
             this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhau.Location = new System.Drawing.Point(204, 383);
             this.txtMatKhau.Name = "txtMatKhau";
@@ -233,25 +236,26 @@
             this.txtMatKhau.Size = new System.Drawing.Size(429, 39);
             this.txtMatKhau.TabIndex = 4;
             // 
-            // guna2TextBox2
+            // txtMaGioiThieu
             // 
-            this.guna2TextBox2.BorderThickness = 2;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(205, 541);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Nhập mã giới thiệu";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(430, 39);
-            this.guna2TextBox2.TabIndex = 4;
+            this.txtMaGioiThieu.BorderThickness = 2;
+            this.txtMaGioiThieu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaGioiThieu.DefaultText = "";
+            this.txtMaGioiThieu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaGioiThieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaGioiThieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaGioiThieu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaGioiThieu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaGioiThieu.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtMaGioiThieu.ForeColor = System.Drawing.Color.Black;
+            this.txtMaGioiThieu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaGioiThieu.Location = new System.Drawing.Point(205, 541);
+            this.txtMaGioiThieu.Name = "txtMaGioiThieu";
+            this.txtMaGioiThieu.PasswordChar = '\0';
+            this.txtMaGioiThieu.PlaceholderText = "Nhập mã giới thiệu";
+            this.txtMaGioiThieu.SelectedText = "";
+            this.txtMaGioiThieu.Size = new System.Drawing.Size(430, 39);
+            this.txtMaGioiThieu.TabIndex = 4;
             // 
             // txtEmail
             // 
@@ -264,6 +268,7 @@
             this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Location = new System.Drawing.Point(204, 302);
             this.txtEmail.Name = "txtEmail";
@@ -272,8 +277,6 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(430, 39);
             this.txtEmail.TabIndex = 4;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtDangNhap
             // 
@@ -286,6 +289,7 @@
             this.txtDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDangNhap.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtDangNhap.ForeColor = System.Drawing.Color.Black;
             this.txtDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDangNhap.Location = new System.Drawing.Point(204, 229);
             this.txtDangNhap.Name = "txtDangNhap";
@@ -429,7 +433,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label lblXNMK;
         private System.Windows.Forms.Label lblEmail;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaGioiThieu;
         private System.Windows.Forms.Label label1;
     }
 }

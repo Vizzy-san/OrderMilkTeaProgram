@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             this.frmForgotPass = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblEmailDaDangKy = new System.Windows.Forms.Label();
             this.btnTieptuc = new Guna.UI2.WinForms.Guna2Button();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             // 
             this.frmForgotPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.frmForgotPass.BackColor = System.Drawing.Color.White;
+            this.frmForgotPass.Controls.Add(this.lblEmailDaDangKy);
             this.frmForgotPass.Controls.Add(this.btnTieptuc);
             this.frmForgotPass.Controls.Add(this.txtEmail);
             this.frmForgotPass.Controls.Add(this.lblEmail);
@@ -55,6 +57,18 @@
             this.frmForgotPass.Size = new System.Drawing.Size(926, 1564);
             this.frmForgotPass.TabIndex = 0;
             // 
+            // lblEmailDaDangKy
+            // 
+            this.lblEmailDaDangKy.AutoSize = true;
+            this.lblEmailDaDangKy.BackColor = System.Drawing.Color.White;
+            this.lblEmailDaDangKy.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailDaDangKy.ForeColor = System.Drawing.Color.White;
+            this.lblEmailDaDangKy.Location = new System.Drawing.Point(204, 300);
+            this.lblEmailDaDangKy.Name = "lblEmailDaDangKy";
+            this.lblEmailDaDangKy.Size = new System.Drawing.Size(110, 14);
+            this.lblEmailDaDangKy.TabIndex = 6;
+            this.lblEmailDaDangKy.Text = "Email không hợp lệ";
+            // 
             // btnTieptuc
             // 
             this.btnTieptuc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -64,14 +78,16 @@
             this.btnTieptuc.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.btnTieptuc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnTieptuc.ForeColor = System.Drawing.Color.White;
-            this.btnTieptuc.Location = new System.Drawing.Point(205, 312);
+            this.btnTieptuc.Location = new System.Drawing.Point(205, 317);
             this.btnTieptuc.Name = "btnTieptuc";
             this.btnTieptuc.Size = new System.Drawing.Size(430, 45);
             this.btnTieptuc.TabIndex = 5;
             this.btnTieptuc.Text = "Tiếp tục";
+            this.btnTieptuc.Click += new System.EventHandler(this.btnTieptuc_Click);
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderThickness = 2;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
@@ -81,6 +97,7 @@
             this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Location = new System.Drawing.Point(205, 258);
             this.txtEmail.Name = "txtEmail";
@@ -89,6 +106,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(430, 39);
             this.txtEmail.TabIndex = 4;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblEmail
             // 
@@ -172,6 +190,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private Guna.UI2.WinForms.Guna2Button btnTieptuc;
+        private System.Windows.Forms.Label lblEmailDaDangKy;
     }
 }
 
