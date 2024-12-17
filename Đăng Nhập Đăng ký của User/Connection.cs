@@ -9,7 +9,7 @@ namespace OrderMillTeaProgram
 {
     class Connection
     {
-        private static string stringConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Visual Studio 2022\Project\OrderMillTeaProgram\UserInfoDB.mdf"";Integrated Security=True";
+        private static string stringConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tuquo\desktop\OrderMilkTeaProgram\UserInfoDB.mdf;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(stringConnection);
